@@ -24,7 +24,7 @@ namespace FirstApp
 
         private void FrmFirstApp_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -77,9 +77,33 @@ namespace FirstApp
         private void BtnMove_Click(object sender, EventArgs e)
         {
             FrmTwo x = new FrmTwo();
-            x.ShowDialog();
+            
             //x.Show();
             //this.Height; this.Width;
+            x.MyText = "Hello";
+            //x.ShowDialog();
+            if (x.ShowDialog() == DialogResult.Cancel)
+            {
+                MessageBox.Show(x.MyText);
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LblMyText.Text = Convert.ToString(e.KeyChar) + " " + Convert.ToString((int)e.KeyChar);
+            TxtMyText.Text = "";
+            //e.Handled = true; => KeyPress event has been handled and pressed key is ignored
+        }
+
+        private void FrmFirstApp_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure?", "Really quit?", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

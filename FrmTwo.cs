@@ -17,6 +17,12 @@ namespace FirstApp
             InitializeComponent();
         }
 
+        public string MyText
+        {
+            get { return TxtTwoWayBinding.Text; }
+            set { TxtTwoWayBinding.Text = value; }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -28,7 +34,7 @@ namespace FirstApp
             int y;
             int sum;
 
-            x = int.Parse(Microsoft.VisualBasic.Interaction.InputBox("Enter x: ", "X",""));
+            x = int.Parse(Microsoft.VisualBasic.Interaction.InputBox("Enter x: ", "X", ""));
             y = int.Parse(Microsoft.VisualBasic.Interaction.InputBox("Enter y: ", "Y", ""));
             sum = x + y;
             MessageBox.Show("The sum is: " + sum, "Result", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
@@ -40,10 +46,12 @@ namespace FirstApp
             if (r == DialogResult.Yes)
             {
                 MessageBox.Show("You chose Yes!");
-            } else if (r == DialogResult.No)
+            }
+            else if (r == DialogResult.No)
             {
                 MessageBox.Show("You chose No!");
-            } else if (r == DialogResult.Cancel)
+            }
+            else if (r == DialogResult.Cancel)
             {
                 MessageBox.Show("You chose Cancel!");
             }

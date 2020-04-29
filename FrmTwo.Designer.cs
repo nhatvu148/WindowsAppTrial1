@@ -31,11 +31,12 @@
             this.BtnClose = new System.Windows.Forms.Button();
             this.BtnCalc = new System.Windows.Forms.Button();
             this.BtnClickMe = new System.Windows.Forms.Button();
+            this.TxtTwoWayBinding = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BtnClose
             // 
-            this.BtnClose.Location = new System.Drawing.Point(160, 163);
+            this.BtnClose.Location = new System.Drawing.Point(93, 159);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(118, 55);
             this.BtnClose.TabIndex = 0;
@@ -64,11 +65,21 @@
             this.BtnClickMe.UseVisualStyleBackColor = true;
             this.BtnClickMe.Click += new System.EventHandler(this.BtnClickMe_Click);
             // 
+            // TxtTwoWayBinding
+            // 
+            this.TxtTwoWayBinding.Location = new System.Drawing.Point(289, 113);
+            this.TxtTwoWayBinding.Multiline = true;
+            this.TxtTwoWayBinding.Name = "TxtTwoWayBinding";
+            this.TxtTwoWayBinding.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TxtTwoWayBinding.Size = new System.Drawing.Size(131, 135);
+            this.TxtTwoWayBinding.TabIndex = 3;
+            // 
             // FrmTwo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(475, 260);
+            this.Controls.Add(this.TxtTwoWayBinding);
             this.Controls.Add(this.BtnClickMe);
             this.Controls.Add(this.BtnCalc);
             this.Controls.Add(this.BtnClose);
@@ -76,6 +87,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTwo";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -84,5 +96,6 @@
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Button BtnCalc;
         private System.Windows.Forms.Button BtnClickMe;
+        private System.Windows.Forms.TextBox TxtTwoWayBinding;
     }
 }

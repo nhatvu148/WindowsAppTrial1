@@ -34,8 +34,8 @@
             this.PicOne = new System.Windows.Forms.PictureBox();
             this.BtnClose = new System.Windows.Forms.Button();
             this.GrpOne = new System.Windows.Forms.GroupBox();
-            this.RBtnOne = new System.Windows.Forms.RadioButton();
             this.RBtnTwo = new System.Windows.Forms.RadioButton();
+            this.RBtnOne = new System.Windows.Forms.RadioButton();
             this.PicTwo = new System.Windows.Forms.PictureBox();
             this.HsbNumber = new System.Windows.Forms.HScrollBar();
             this.MnuColors = new System.Windows.Forms.MenuStrip();
@@ -44,6 +44,9 @@
             this.greenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BtnMove = new System.Windows.Forms.Button();
+            this.TxtMyText = new System.Windows.Forms.TextBox();
+            this.LblMyText = new System.Windows.Forms.Label();
+            this.CboOne = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.PicOne)).BeginInit();
             this.GrpOne.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicTwo)).BeginInit();
@@ -63,7 +66,7 @@
             // TxtBox
             // 
             this.TxtBox.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.TxtBox.Location = new System.Drawing.Point(171, 102);
+            this.TxtBox.Location = new System.Drawing.Point(220, 102);
             this.TxtBox.Name = "TxtBox";
             this.TxtBox.Size = new System.Drawing.Size(185, 27);
             this.TxtBox.TabIndex = 1;
@@ -82,7 +85,7 @@
             // PicOne
             // 
             this.PicOne.Image = global::FirstApp.Properties.Resources._1200px_React_icon_svg;
-            this.PicOne.Location = new System.Drawing.Point(171, 156);
+            this.PicOne.Location = new System.Drawing.Point(220, 156);
             this.PicOne.Name = "PicOne";
             this.PicOne.Size = new System.Drawing.Size(91, 55);
             this.PicOne.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,18 +115,6 @@
             this.GrpOne.TabStop = false;
             this.GrpOne.Text = "React Logo";
             // 
-            // RBtnOne
-            // 
-            this.RBtnOne.AutoSize = true;
-            this.RBtnOne.Location = new System.Drawing.Point(20, 22);
-            this.RBtnOne.Name = "RBtnOne";
-            this.RBtnOne.Size = new System.Drawing.Size(78, 19);
-            this.RBtnOne.TabIndex = 0;
-            this.RBtnOne.TabStop = true;
-            this.RBtnOne.Text = "React 1";
-            this.RBtnOne.UseVisualStyleBackColor = true;
-            this.RBtnOne.CheckedChanged += new System.EventHandler(this.RBtnOne_CheckedChanged);
-            // 
             // RBtnTwo
             // 
             this.RBtnTwo.AutoSize = true;
@@ -136,10 +127,22 @@
             this.RBtnTwo.UseVisualStyleBackColor = true;
             this.RBtnTwo.CheckedChanged += new System.EventHandler(this.RBtnTwo_CheckedChanged);
             // 
+            // RBtnOne
+            // 
+            this.RBtnOne.AutoSize = true;
+            this.RBtnOne.Location = new System.Drawing.Point(20, 22);
+            this.RBtnOne.Name = "RBtnOne";
+            this.RBtnOne.Size = new System.Drawing.Size(78, 19);
+            this.RBtnOne.TabIndex = 0;
+            this.RBtnOne.TabStop = true;
+            this.RBtnOne.Text = "React 1";
+            this.RBtnOne.UseVisualStyleBackColor = true;
+            this.RBtnOne.CheckedChanged += new System.EventHandler(this.RBtnOne_CheckedChanged);
+            // 
             // PicTwo
             // 
             this.PicTwo.Image = global::FirstApp.Properties.Resources._1200px_React_icon_svg;
-            this.PicTwo.Location = new System.Drawing.Point(171, 217);
+            this.PicTwo.Location = new System.Drawing.Point(220, 217);
             this.PicTwo.Name = "PicTwo";
             this.PicTwo.Size = new System.Drawing.Size(91, 50);
             this.PicTwo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -182,21 +185,21 @@
             // redToolStripMenuItem
             // 
             this.redToolStripMenuItem.Name = "redToolStripMenuItem";
-            this.redToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.redToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.redToolStripMenuItem.Text = "Red";
             this.redToolStripMenuItem.Click += new System.EventHandler(this.redToolStripMenuItem_Click);
             // 
             // greenToolStripMenuItem
             // 
             this.greenToolStripMenuItem.Name = "greenToolStripMenuItem";
-            this.greenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.greenToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.greenToolStripMenuItem.Text = "Green";
             this.greenToolStripMenuItem.Click += new System.EventHandler(this.greenToolStripMenuItem_Click);
             // 
             // blueToolStripMenuItem
             // 
             this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
-            this.blueToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.blueToolStripMenuItem.Size = new System.Drawing.Size(131, 26);
             this.blueToolStripMenuItem.Text = "Blue";
             this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
             // 
@@ -210,11 +213,45 @@
             this.BtnMove.UseVisualStyleBackColor = true;
             this.BtnMove.Click += new System.EventHandler(this.BtnMove_Click);
             // 
+            // TxtMyText
+            // 
+            this.TxtMyText.Location = new System.Drawing.Point(419, 279);
+            this.TxtMyText.Name = "TxtMyText";
+            this.TxtMyText.Size = new System.Drawing.Size(262, 22);
+            this.TxtMyText.TabIndex = 9;
+            this.TxtMyText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // LblMyText
+            // 
+            this.LblMyText.AutoSize = true;
+            this.LblMyText.Location = new System.Drawing.Point(421, 310);
+            this.LblMyText.Name = "LblMyText";
+            this.LblMyText.Size = new System.Drawing.Size(0, 15);
+            this.LblMyText.TabIndex = 10;
+            // 
+            // CboOne
+            // 
+            this.CboOne.FormattingEnabled = true;
+            this.CboOne.Items.AddRange(new object[] {
+            "Cat",
+            "Dog",
+            "Mouse",
+            "Elephant",
+            "Monkey",
+            "Buffalo"});
+            this.CboOne.Location = new System.Drawing.Point(23, 142);
+            this.CboOne.Name = "CboOne";
+            this.CboOne.Size = new System.Drawing.Size(142, 23);
+            this.CboOne.TabIndex = 11;
+            // 
             // FrmFirstApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CboOne);
+            this.Controls.Add(this.LblMyText);
+            this.Controls.Add(this.TxtMyText);
             this.Controls.Add(this.BtnMove);
             this.Controls.Add(this.HsbNumber);
             this.Controls.Add(this.GrpOne);
@@ -229,6 +266,7 @@
             this.Name = "FrmFirstApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Program";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFirstApp_FormClosing);
             this.Load += new System.EventHandler(this.FrmFirstApp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PicOne)).EndInit();
             this.GrpOne.ResumeLayout(false);
@@ -259,6 +297,9 @@
         private System.Windows.Forms.ToolStripMenuItem greenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem blueToolStripMenuItem;
         private System.Windows.Forms.Button BtnMove;
+        private System.Windows.Forms.TextBox TxtMyText;
+        private System.Windows.Forms.Label LblMyText;
+        private System.Windows.Forms.ComboBox CboOne;
     }
 }
 
